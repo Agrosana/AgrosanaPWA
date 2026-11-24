@@ -1,0 +1,37 @@
+AGROSANA - VERSION PWA (display: browser / orientation: portrait)
+===============================================================
+
+CAMBIOS
+- manifest.webmanifest: declara display=browser y orientation=portrait.
+- service-worker.js: precarga los recursos principales y permite abrir el sitio sin conexión.
+- js/pwa.js: registra el Service Worker.
+- index.html: enlaza el manifiesto y el registro PWA.
+
+IMPORTANTE SOBRE browser + portrait
+La orientación portrait es una preferencia declarada en el manifiesto. En modo
+display=browser, el navegador normalmente conserva el control de la ventana y
+puede ignorar la orientación solicitada. Por ello, al girar el teléfono, la
+página puede girar también. Esto es un resultado válido para explicar en la
+demostración: display y orientation son preferencias, no un bloqueo garantizado.
+
+PROBAR EN TU COMPUTADORA
+1. Abre una terminal dentro de la carpeta raíz del proyecto (la que contiene act2).
+2. Ejecuta: python -m http.server 8080
+3. Abre: http://localhost:8080/act2/
+4. En las herramientas del navegador, revisa Application > Manifest y Service Workers.
+
+PROBAR EN CELULAR
+1. Publica la carpeta del proyecto en un hosting HTTPS (por ejemplo, Vercel).
+2. Abre en el teléfono la URL pública que termine en /act2/.
+3. Visita el sitio al menos una vez con Internet para que el Service Worker almacene
+   los recursos.
+4. Desactiva Internet y recarga para comprobar el funcionamiento offline.
+5. Gira físicamente el teléfono y observa si el navegador mantiene o cambia la
+   orientación. En display=browser, normalmente la orientación queda a cargo
+   del navegador.
+6. Para comparar el efecto de display, recuerda que esta versión está configurada
+   deliberadamente como browser; no se debe confundir con standalone o fullscreen.
+
+URL PROPIA
+La URL pública se obtiene después de desplegar este proyecto. No existe una URL
+pública creada automáticamente al modificar los archivos.

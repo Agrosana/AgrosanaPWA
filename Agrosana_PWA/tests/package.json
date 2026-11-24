@@ -1,0 +1,17 @@
+{
+  "name": "agrosana-tests",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Pruebas de las actividades de AgroSana (node:test + Playwright)",
+  "type": "module",
+  "scripts": {
+    "lint": "node --test unit/estructura.test.mjs",
+    "test:e2e": "playwright test",
+    "test": "node --test unit/estructura.test.mjs && playwright test",
+    "smoke": "playwright test --project=escritorio --grep @smoke"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "6.7.2",
+    "@playwright/test": "1.56.0"
+  }
+}

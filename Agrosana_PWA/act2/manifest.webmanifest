@@ -1,0 +1,21 @@
+{
+  "id": "/act2/",
+  "name": "AgroSana · Insumos para el campo de la Costa Grande",
+  "short_name": "AgroSana",
+  "description": "Catálogo de fertilizantes, fungicidas, coadyuvantes y bioestimulantes de AgroSana.",
+  "lang": "es-MX",
+  "start_url": "/act2/",
+  "scope": "/act2/",
+  "display": "browser",
+  "orientation": "portrait",
+  "background_color": "#FBFBF7",
+  "theme_color": "#1B6B2A",
+  "icons": [
+    {
+      "src": "img/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
